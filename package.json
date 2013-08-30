@@ -1,0 +1,18 @@
+{
+  "name": "TaffyDocs",
+  "version": "0.1.0",
+  "description": "Documentation for Taffy",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/atuttle/TaffyDocs.git"
+  },
+  "author": "Adam Tuttle (adam@fusiongrokker.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atuttle/TaffyDocs/issues"
+  }
+}
