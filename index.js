@@ -19,7 +19,7 @@ app.use(express.compress())
 
 console.log('listening on port %s', port);
 
-cassini.run({
+cassini.generate({
 	inputDir: path.normalize(__dirname + '/src/')
 	,outputDir: path.normalize(__dirname + '/bin/')
 	,verbose: true
