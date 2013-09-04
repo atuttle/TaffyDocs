@@ -3,7 +3,7 @@
 */
 require('strong-agent').profile(
 	process.env.NODEFLY_KEY,
-	[APPLICATION_NAME,'Heroku'],
+	['Taffy Docs','Heroku'],
 	{
 		// time in ms when the event loop is considered blocked
 		blockThreshold: 10
