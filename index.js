@@ -1,5 +1,18 @@
 /*
-	This is a simple way to host the generated documentation (e.g. on Heroku)
+	You can ignore this section, it's used for monitoring and is specific to my environment
+*/
+require('strong-agent').profile(
+	process.env.NODEFLY_KEY,
+	[APPLICATION_NAME,'Heroku'],
+	{
+		// time in ms when the event loop is considered blocked
+		blockThreshold: 10
+	}
+);
+
+/*
+	This is a simple way to host the generated documentation using Express
+	-- There's probably a leaner way, but this is literally 5 lines of code.
 */
 var express  = require('express')
 	,pkg      = require('./package.json')
