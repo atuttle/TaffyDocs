@@ -35,5 +35,6 @@ console.log('listening on port %s', port);
 cassini.generate({
 	inputDir: path.normalize(__dirname + '/src/')
 	,outputDir: path.normalize(__dirname + '/bin/')
+	,templatePath: path.normalize(__dirname + '/templates/')
 	,verbose: true
 });

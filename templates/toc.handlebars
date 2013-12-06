@@ -1,0 +1,11 @@
+<a class="toc_title" href="#">{{title}}</a>
+
+<select id="version">
+	{{#each versions}}
+		<option value="{{versionName}}" {{#if selected}}selected{{/if}}>{{versionName}}</option>
+	{{/each}}
+</select>
+
+{{#each sections}}
+	<h{{level}}><a href="#{{id}}">{{text}}</a></h{{level}}>
+{{/each}}
