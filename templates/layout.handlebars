@@ -23,11 +23,17 @@
       color: #000;
       font-family: Ratio, Helvetica Neue, Helvetica, Arial;
     }
+    #logo {
+      position: fixed;
+      top: 0;
+      right: 0;
+      max-width: 300px;
+    }
     div#sidebar {
       background: #f9f9f9;
       position: fixed;
       top: 0; left: 0; bottom: 0;
-      width: 300px;
+      width: 270px;
       overflow-y: auto;
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
@@ -48,7 +54,7 @@
       color: #444;
     }
     a:active, a:hover {
-      color: blueviolet;
+      color: #bf0070;
     }
     #sidebar #version {
       min-width: 70%;
@@ -94,7 +100,7 @@
     }
     div.container {
       width: 650px;
-      margin: 40px 0 50px 360px;
+      margin: 40px 0 50px 320px;
     }
     #Taffy {
       font-family: Ratio,'Helvetica Nueue',Helvetica,sans-serif;
@@ -105,14 +111,14 @@
       text-align: center;
       padding: 13px 0;
       border-radius: 6px;
-      background-color: blueviolet;
+      background-color: #754c24;
       text-decoration: none;
       color: white;
       box-shadow: 3px 3px 6px #000;
       margin: 0 40px;
     }
     #download:hover {
-      background-color: orangered;
+      background-color: #9e005d;
     }
     p {
       margin: 14px 0;
@@ -216,6 +222,16 @@
       }
       pre {
         overflow: scroll;
+      }
+    }
+    @media only screen and (max-width: 1270px) {
+      #logo {
+        max-width: 200px;
+      }
+    }
+    @media only screen and (max-width: 1170px) {
+      #logo {
+        max-width: 100px;
       }
     }
   </style>
