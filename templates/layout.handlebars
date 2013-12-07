@@ -17,20 +17,17 @@
   </script>
   <style>
     body {
-      font-size: 14px;
-      line-height: 22px;
-      background: #f4f4f4 url(../static/background.png);
+      font-size: 1.2em;
+      line-height: 1.3em;
+      background: #f4f4f4 url(../static/gplaypattern.png);
       color: #000;
-      font-family: Helvetica Neue, Helvetica, Arial;
-    }
-    .interface {
-      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif !important;
+      font-family: Ratio, Helvetica Neue, Helvetica, Arial;
     }
     div#sidebar {
-      background: #fff;
+      background: #f9f9f9;
       position: fixed;
       top: 0; left: 0; bottom: 0;
-      width: 200px;
+      width: 300px;
       overflow-y: auto;
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
@@ -42,8 +39,9 @@
       display: block;
       color: black;
       font-weight: bold;
+      text-decoration: none;
       margin-top: 15px;
-      font-size: 1.1em;
+      font-size: 1.7em;
     }
     a, a:visited {
       text-decoration: underline;
@@ -63,16 +61,16 @@
       margin: 10px 0 0 0;
       padding: 0;
       border: none;
+      font-size: 0.9em;
     }
     #sidebar h2 a {
-      font-size: 13px;
       text-decoration: none;
     }
     #sidebar h2 a:hover {
       text-decoration: underline;
     }
     #sidebar h3 {
-      font-size: 11px;
+      font-size: 0.8em;
       margin: 0;
       padding: 0 0 0 10px;
       background: none;
@@ -81,31 +79,39 @@
       font-weight: normal;
     }
     #sidebar h4 {
+      font-size: 0.8em;
       margin: 0;
       padding: 0 0 0 15px;
-      font-size: 11px;
     }
     #sidebar h4:before {
       content: '- ';
     }
     #sidebar h4 a {
       font-weight: normal;
+      text-decoration: none;
     }
     div.container {
-      width: 550px;
-      margin: 40px 0 50px 260px;
+      width: 650px;
+      margin: 40px 0 50px 360px;
     }
-    .links {
-      padding: 20px;
-      font-size: 1.2em;
-      background-color: #ddd;
-      border: 1px solid #aaa;
-      border-radius: 6px;
+    #download {
+      border: 1px solid blueviolet;
+      display: block;
       text-align: center;
+      padding: 13px 0;
+      border-radius: 6px;
+      background-color: blueviolet;
+      text-decoration: none;
+      color: white;
+      box-shadow: 3px 3px 6px #000;
     }
     p {
-      margin: 10px 0;
-      width: 550px;
+      margin: 14px 0;
+      line-height: 1.4em;
+      /*width: 550px;*/
+    }
+    h1, h2, h3, h4, h5 {
+      font-family: 'freight-micro-pro',Georgia,serif;
     }
     h2, h3, h4 {
       padding-top: 10px;
@@ -131,6 +137,9 @@
       font-size: 1.1em;
       border-bottom: 1px dashed;
       margin-bottom: 4px;
+    }
+    #taffy {
+      font-family: Ratio, Helvetica Neue, Helvetica, sans-serif;
     }
     table, tr, td {
       margin: 0; padding: 0;
