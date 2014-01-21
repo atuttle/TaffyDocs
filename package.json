@@ -4,7 +4,7 @@
   "description": "Documentation for Taffy",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "echo lol tests"
   },
   "repository": {
     "type": "git",
