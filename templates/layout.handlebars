@@ -7,13 +7,8 @@
   <title>{{{title}}}</title>
   <!-- typekit -->
   <script type="text/javascript">
-    (function() {
-      var config = {
-        kitId: 'vey6upv',
-        scriptTimeout: 3000
-      };
-      var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-    })();
+    (function() { var config = { kitId: 'vey6upv', scriptTimeout: 3000 };
+    var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s) })();
   </script>
   <style>
     body {
@@ -54,11 +49,11 @@
       color: #444;
     }
     a:active, a:hover {
-      color: #bf0070;
+      color: #d91b5c;
     }
     #sidebar #version {
       min-width: 70%;
-      margin-bottom: 60px;
+      margin-bottom: 20px;
     }
     #sidebar .version {
       font-size: 10px;
@@ -111,14 +106,14 @@
       text-align: center;
       padding: 13px 0;
       border-radius: 6px;
-      background-color: #754c24;
+      background-color: #75c043;
       text-decoration: none;
       color: white;
       box-shadow: 3px 3px 6px #000;
       margin: 0 40px;
     }
     #download:hover {
-      background-color: #9e005d;
+      background-color: #d91b5c;
     }
     p {
       margin: 14px 0;
