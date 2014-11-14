@@ -28,6 +28,9 @@ app.use(express.compress())
 	.get('/', function(req,res){
 		res.redirect(301, pkg.version+'/');
 	})
+	.get('/!/:deep', function(req,res){
+		res.redirect(301, pkg.version+'/#'+req.params.deep)
+	})
 	.listen(port);
 
 console.log('listening on port %s', port);
