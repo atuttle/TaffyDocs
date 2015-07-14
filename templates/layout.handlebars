@@ -20,10 +20,18 @@
       font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial;
     }
     #logo {
+      float: left;
+      height: 67px;
+      margin-right: 10px;
+    }
+    #book {
+      text-align: center;
       position: fixed;
-      top: 0;
-      right: 0;
-      max-width: 300px;
+      top: 20px;
+      right: 20px;
+    }
+    #book img {
+      width: 250px;
     }
     div#sidebar {
       background: #f9f9f9;
@@ -123,6 +131,7 @@
     }
     h1, h2, h3, h4, h5 {
       font-family: 'Open Sans',Georgia,serif;
+      word-wrap: break-word;
     }
     h2, h3, h4 {
       padding-top: 10px;
@@ -164,7 +173,8 @@
       padding: 0 0 0 20px;
     }
       li {
-        width: 500px;
+        max-width: 500px;
+        width: 100%;
         margin-bottom: 10px;
       }
       code, pre, tt {
@@ -189,29 +199,23 @@
         }
         pre {
           font-size: 12px;
-          padding: 2px 0 2px 15px;
+          padding: 2px;
           margin: 0px 0 30px;
           width: 100%;
         }
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 640px),
           only screen and (-o-min-device-pixel-ratio: 3/2) and (max-width: 640px),
           only screen and (min-device-pixel-ratio: 1.5) and (max-width: 640px) {
+/*
       img {
         max-width: 100%;
       }
-      div#sidebar {
-        -webkit-overflow-scrolling: initial;
-        position: relative;
-        width: 90%;
-        height: 120px;
-        left: 0;
-        top: -7px;
-        padding: 10px 0 10px 30px;
-        border: 0;
+*/
+      #book {
+        position: initial;
       }
-      img#logo {
-        width: auto;
-        height: auto;
+      div#sidebar {
+        display: none;
       }
       div.container {
         margin: 0;
@@ -219,21 +223,14 @@
       }
       p, div.container ul {
         max-width: 98%;
-        overflow-x: scroll;
       }
       pre {
         overflow: scroll;
       }
     }
     @media only screen and (max-width: 1270px) {
-      #logo {
-        max-width: 200px;
-      }
     }
     @media only screen and (max-width: 1170px) {
-      #logo {
-        max-width: 100px;
-      }
     }
   </style>
 </head>
@@ -244,6 +241,13 @@
 </div>
 
 <div class="container">
+  <div id="book">
+    I wrote a book about REST!<br/>
+    <a href="https://gum.co/rest-the-book" title="I wrote a book about REST! Click here to check it out...">
+      <img src="../static/book.png" alt="I wrote a book about REST! Click here to check it out..." title="I wrote a book about REST! Click here to check it out..." />
+    </a>
+  </div>
+
   {{{body}}}
 </div>
 
