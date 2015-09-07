@@ -19,6 +19,7 @@ var express  = require('express')
 	,cassini  = require('cassini')
 	,path     = require('path')
 	,app      = express()
+	,fs       = require('fs')
 	;
 
 var port = process.env.PORT || 5000;
@@ -30,6 +31,19 @@ app.use(express.compress())
 	})
 	.get('/!/:deep', function(req,res){
 		res.redirect(301, pkg.version+'/#'+req.params.deep)
+	})
+	.get('/:ver/', function(req,res){
+		var semver = req.params.ver.split('.');
+		var major = semver[0];
+		var minor = semver[1];
+		var patch = semver[2];
+
+		while( patch > 0 ){
+			if ( fs.existsSync( __dirname + '/bin/' + major + '.' + minor + '.' + patch + '/index.html' ) ){
+				return res.redirect( 302, major + '.' + minor + '.' + patch + '/' );
+			}
+			patch--;
+		}
 	})
 	.listen(port);
 
