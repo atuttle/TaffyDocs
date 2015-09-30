@@ -45,7 +45,7 @@
 		<script src="/assets/toc.js"></script>
 		<script type="text/javascript">
 			$('#version').on('change', function(){
-				document.location.href = '/' + $(this).val() + '.html';
+				document.location.href = '/' + $(this).val();
 			}).find('option').each(function(){
 				if ( document.location.href.indexOf( $(this).val() ) > -1 ){
 					$(this).prop('selected', 'selected');
