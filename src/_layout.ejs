@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title><%= title %></title>
+		<meta name="description" content="Documentation for Taffy — The REST Web Service Framework for ColdFusion and Lucee">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto+Mono' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="assets/normalize.css" />
+		<link rel="stylesheet" href="assets/docs.css" />
+	</head>
+	<body class="body">
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<section class="toc">
+			<h1 class="main-header">
+				<img src="/assets/taffy-logo-large.png" class="main-logo" />
+				Taffy
+			</h1>
+			<select id="version">
+				<option value="2.0.0">2.0.0</option>
+				<option value="2.0.1">2.0.1</option>
+				<option value="2.1.0">2.1.0</option>
+				<option value="2.2.0">2.2.0</option>
+				<option value="2.2.3">2.2.3</option>
+				<option value="2.2.4">2.2.4</option>
+				<option value="3.0.0">3.0.0</option>
+				<option value="3.0.1">3.0.1</option>
+				<option value="3.0.2">3.0.2</option>
+				<option value="3.1.0">3.1.0</option>
+			</select>
+			<section class="contents"></section>
+		</section>
+		<section class="docs">
+			<%- yield %>
+		</section>
+
+		<div id="footer">
+			Copyright &copy; 2015 <a href="http://fusiongrokker.com">Adam Tuttle</a> and <a href="https://github.com/atuttle/TaffyDocs/graphs/contributors">Contributors</a>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+		<script src="/assets/toc.js"></script>
+		<script type="text/javascript">
+			$('#version').on('change', function(){
+				document.location.href = '/' + $(this).val() + '.html';
+			}).find('option').each(function(){
+				if ( document.location.href.indexOf( $(this).val() ) > -1 ){
+					$(this).prop('selected', 'selected');
+				}
+			});
+
+			anchors.options = {
+				icon: '#',
+				placement: 'left'
+			};
+			anchors.add('h2,h3,h4,h5');
+
+			$('.toc .contents').toc({
+				'selectors': 'h2,h3,h4' //elements to use as headings
+				,'container': '.docs' //element to find all selectors in
+				,'highlightOffset': 20 //offset to trigger the next headline
+			});
+
+			if ( $('.toc .contents ul').is(':empty') ){
+				$('.toc').hide();
+			}
+		</script>
+	</body>
+</html>
