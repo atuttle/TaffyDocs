@@ -9,7 +9,7 @@
   "scripts": {
     "harp": "./node_modules/.bin/harp compile src bin",
     "surge": "./node_modules/.bin/surge bin",
-    "publish": "npm run harp && npm run surge"
+    "deploy": "npm run harp && npm run surge"
   },
   "repository": {
     "type": "git",
