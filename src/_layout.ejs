@@ -11,9 +11,7 @@
 		<link rel="stylesheet" href="assets/docs.css" />
 	</head>
 	<body class="body">
-		<!--[if lt IE 8]>
-			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
+		<div class="search-box"><a href="#toc">TOC</a></div>
 		<section class="toc">
 			<h1 class="main-header">
 				<img src="/assets/taffy-logo-large.png" class="main-logo" />
@@ -54,7 +52,7 @@
 
 			anchors.options = {
 				icon: '#',
-				placement: 'left'
+				placement: 'right'
 			};
 			anchors.add('h2,h3,h4,h5');
 
@@ -64,9 +62,22 @@
 				,'highlightOffset': 20 //offset to trigger the next headline
 			});
 
+			//e.g. for the 404 page
 			if ( $('.toc .contents ul').is(':empty') ){
 				$('.toc').hide();
+				$('.search-box').hide();
 			}
+
+			$('.search-box a').click(function(e){
+				e.preventDefault();
+				$('.toc').addClass('mod-active');
+				return false;
+			});
+			$('.toc a').click(function(){
+				if ( $('.search-box').is(':visible') ){
+					$('.toc').removeClass('mod-active');
+				}
+			});
 		</script>
 	</body>
 </html>

@@ -1,10 +1,14 @@
-h1 { font-size: 2.7em; }
-h2 { font-size: 2.0em; }
-h3 { font-size: 1.6em; }
-h4 { font-size: 1.3em; }
+h1 { font-size: 2.7em; line-height: 1em; }
+h2 { font-size: 2.0em; line-height: 1em; }
+h3 { font-size: 1.6em; line-height: 1em; }
+h4 { font-size: 1.3em; line-height: 1em; }
 
 .body {
 	font-family: Raleway, Helvetica, Arial;
+}
+
+.search-box {
+	display: none;
 }
 
 .main-header {
@@ -18,7 +22,7 @@ h4 { font-size: 1.3em; }
 #version {
 	padding: 5px;
 	width: 200px;
-	margin: -20px 20px 20px;
+	margin: -32px 20px 20px;
 	display: block;
 }
 
@@ -38,6 +42,7 @@ h4 { font-size: 1.3em; }
 	width: 320px;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	background-color: white;
 }
 
 	.toc ul {
@@ -107,4 +112,63 @@ pre code {
 	padding: 10px 30px;
 	color: white;
 	background-color: deepskyblue;
+}
+
+@media only screen and (max-width: 768px) {
+	h1 {
+		font-size: 1.5em;
+		margin: 0 0 0.3em;
+	}
+
+	.search-box {
+		display: block;
+		position: fixed;
+		top: 20px;
+		right: 5px;
+	}
+
+		.search-box a {
+			padding: 15px;
+			background-color: darkorchid;
+			border-radius: 8px;
+			color: white;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+	.toc {
+		position: initial;
+		display: block;
+		padding: 10px;
+		width: auto;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+		.toc .contents {
+			display: none;
+		}
+
+	.toc.mod-active {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow-y: scroll;
+	}
+		.toc.mod-active .contents {
+			display: block;
+		}
+
+	.docs {
+		margin: 0 10px;
+	}
+
+	#version {
+		margin: -17px 20px 20px;
+	}
+
+	#footer {
+		margin: 30px 0 0 0;
+	}
 }
