@@ -10,4 +10,7 @@ Thanks for your contributions!
 
 ### Compiling
 
-To compile your copy locally, run `npm run harp`
+The documentation is compiled by [docsify](https://docsify.js.org).
+
+1. Install the tool globally with `npm i -g docsify-cli`
+1. In the TaffyDocs folder you can run it locally by running `docsify serve src`.
