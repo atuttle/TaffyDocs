@@ -2,15 +2,6 @@
   "name": "taffydocs",
   "version": "3.2.0",
   "description": "This repo is the source of the [documentation](http://docs.taffy.io) for [Taffy](http://taffy.io).",
-  "dependencies": {
-    "harp": "^0.24.1",
-    "surge": "^0.19.0"
-  },
-  "scripts": {
-    "harp": "harp compile src bin",
-    "surge": "surge bin",
-    "deploy": "npm run harp && npm run surge"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atuttle/TaffyDocs.git"
