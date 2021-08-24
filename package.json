@@ -1,6 +1,6 @@
 {
   "name": "taffydocs",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "This repo is the source of the [documentation](http://docs.taffy.io) for [Taffy](http://taffy.io).",
   "repository": {
     "type": "git",
